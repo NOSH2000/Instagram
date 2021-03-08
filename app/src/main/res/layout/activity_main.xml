@@ -34,13 +34,6 @@
         android:layout_height="wrap_content"
         android:text="Submit"/>
 
-<!--    <ImageView-->
-<!--        android:id="@+id/imProgressBar"-->
-<!--        -->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        app:srcCompat="@drawable/loading" />-->
-
     <ProgressBar
         android:id="@+id/pbLoading"
         android:layout_width="99dp"
@@ -58,7 +51,7 @@
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_above="@+id/logout"
-            android:layout_marginStart="14dp"
+            android:layout_marginStart="20dp"
             android:background="@drawable/instagram_user_filled_24" />
 
         <TextView
@@ -66,10 +59,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
-            android:layout_alignParentLeft="true"
+            android:layout_marginStart="10dp"
+            android:layout_alignParentLeft= "true"
             android:layout_marginBottom="13dp"
             android:text="LOG OUT"
-            android:textSize="18sp" />
+            android:textSize="15sp" />
     </RelativeLayout>
 
 
