@@ -34,11 +34,43 @@
         android:layout_height="wrap_content"
         android:text="Submit"/>
 
-    <Button
-        android:id="@+id/btnLogout"
+<!--    <ImageView-->
+<!--        android:id="@+id/imProgressBar"-->
+<!--        -->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        app:srcCompat="@drawable/loading" />-->
+
+    <ProgressBar
+        android:id="@+id/pbLoading"
+        android:layout_width="99dp"
+        android:layout_height="109dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="25dp"
+        android:visibility="invisible" />
+
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:text="LOG OUT" />
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btnLogout"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_above="@+id/logout"
+            android:layout_marginStart="14dp"
+            android:background="@drawable/instagram_user_filled_24" />
+
+        <TextView
+            android:id="@+id/logout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="13dp"
+            android:text="LOG OUT"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
 
 </LinearLayout>

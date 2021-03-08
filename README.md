@@ -1,6 +1,6 @@
-# Project 3 - *Instagram*
+# Project 3 - *Pinstagram*
 
-**Instagram** is a photo sharing app similar to Instagram but using Parse as its backend.
+**Pinstagram** is a photo sharing app similar to Instagram but using Parse as its backend.
 
 Time spent: **7** hours spent in total
 

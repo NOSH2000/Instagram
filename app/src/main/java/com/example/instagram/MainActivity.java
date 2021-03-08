@@ -17,6 +17,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.parse.FindCallback;
@@ -40,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
     private Button btnLogout;
     private File photoFile;
     private String photoFileName = "photo.jpeg";
+    private ProgressBar pbLoading;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,6 +53,7 @@ public class MainActivity extends AppCompatActivity {
         ivPostImage = findViewById(R.id.ivPostImage);
         btnSubmit = findViewById(R.id.btnSubmit);
         btnLogout = findViewById(R.id.btnLogout);
+        pbLoading = findViewById(R.id.pbLoading);
 
         btnLogout.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -82,6 +85,10 @@ public class MainActivity extends AppCompatActivity {
                     return;
                 }
                 ParseUser currentUser = ParseUser.getCurrentUser();
+
+                // on some click or some loading we need to wait for...
+                pbLoading.setVisibility(ProgressBar.VISIBLE);
+
                 savePost(description, currentUser, photoFile);
             }
         });
@@ -110,6 +117,8 @@ public class MainActivity extends AppCompatActivity {
 
                 // Clear out the image preview
                 ivPostImage.setImageResource(0);
+
+                pbLoading.setVisibility(ProgressBar.INVISIBLE);
             }
         });
     }
