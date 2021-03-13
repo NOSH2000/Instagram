@@ -1,31 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".fragments.ComposeFragment">
 
-    <Button
-        android:id="@+id/btnLogout"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="20dp"
-        android:background="@drawable/instagram_user_filled_24" />
-
-    <EditText
-        android:id="@+id/etDescription"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="description" />
-
-    <Button
-        android:id="@+id/btnCaptureImage"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Take Picture" />
 
     <ImageView
         android:id="@+id/ivPostImage"
@@ -34,41 +14,51 @@
         tools:srcCompat="@tools:sample/avatars" />
 
     <Button
-        android:id="@+id/btnSubmit"
+        android:id="@+id/btnCaptureImage"
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:layout_marginTop="50dp"
+        android:layout_gravity="center"
+        android:backgroundTint="@color/purple_200"
+        android:textColor="@color/white"
+        android:text="Take Picture" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/username_text_input_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Submit" />
+        android:layout_marginTop="50dp"
+        android:textColorHint="@color/purple">
 
-    <!--    <RelativeLayout-->
-    <!--        android:layout_width="match_parent"-->
-    <!--        android:layout_height="wrap_content">-->
-
-    <!--        <Button-->
-    <!--            android:id="@+id/btnLogout"-->
-    <!--            android:layout_width="40dp"-->
-    <!--            android:layout_height="40dp"-->
-    <!--            android:layout_above="@+id/logout"-->
-    <!--            android:layout_marginStart="20dp"-->
-    <!--            android:background="@drawable/instagram_user_filled_24" />-->
-
-    <!--        <TextView-->
-    <!--            android:id="@+id/logout"-->
-    <!--            android:layout_width="wrap_content"-->
-    <!--            android:layout_height="wrap_content"-->
-    <!--            android:layout_alignParentBottom="true"-->
-    <!--            android:layout_marginStart="10dp"-->
-    <!--            android:layout_alignParentLeft= "true"-->
-    <!--            android:layout_marginBottom="13dp"-->
-    <!--            android:text="LOG OUT"-->
-    <!--            android:textSize="15sp" />-->
-    <!--    </RelativeLayout>-->
+        <EditText
+            android:id="@+id/etDescription"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:ems="10"
+            android:hint="Description" />
+    </com.google.android.material.textfield.TextInputLayout>
 
     <ProgressBar
         android:id="@+id/pbLoading"
         android:layout_width="99dp"
         android:layout_height="109dp"
         android:layout_gravity="center"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="20dp"
         android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/btnSubmit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:padding="10dp"
+        android:textSize="16sp"
+        android:layout_marginTop="30dp"
+        android:backgroundTint="@color/purple_200"
+        android:textColor="@color/white"
+        android:text="POST" />
 
 </LinearLayout>

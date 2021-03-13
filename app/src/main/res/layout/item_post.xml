@@ -1,24 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:padding="8dp">
+    android:paddingTop="8dp"
+    android:paddingBottom="8dp">
 
     <TextView
         android:id="@+id/tvUsername"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Rahul"
+        android:layout_marginLeft="15dp"
         android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
     <ImageView
         android:id="@+id/ivImage"
         android:layout_width="match_parent"
         android:layout_height="300dp"
+        android:layout_below="@+id/tvUsername"
+        android:layout_marginTop="10dp"
         android:layout_marginBottom="8dp"
         android:scaleType="centerCrop"
         tools:srcCompat="@tools:sample/avatars" />
@@ -27,7 +31,58 @@
         android:id="@+id/tvDescription"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/ivHeart"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="15dp"
         android:text="Trying to look hipster"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
 
-</LinearLayout>
+    <ImageView
+        android:id="@+id/ivHeart"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_below="@+id/ivImage"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="5dp"
+        app:srcCompat="@drawable/heart_icon" />
+
+    <ImageView
+        android:id="@+id/ivComment"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_below="@+id/ivImage"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="6dp"
+        android:layout_toEndOf="@+id/ivHeart"
+        app:srcCompat="@drawable/ufi_comment" />
+
+    <ImageView
+        android:id="@+id/ivShare"
+        android:layout_width="40dp"
+        android:layout_height="25dp"
+        android:layout_below="@+id/ivImage"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="6dp"
+        android:layout_toEndOf="@+id/ivComment"
+        app:srcCompat="@drawable/share_icon" />
+
+    <ImageView
+        android:id="@+id/ivSave"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_below="@+id/ivImage"
+        android:layout_marginRight="10dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="6dp"
+        app:srcCompat="@drawable/save_icon" />
+
+    <ImageView
+        android:id="@+id/ivMore"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="6dp"
+        app:srcCompat="@drawable/ufi_more" />
+
+</RelativeLayout>

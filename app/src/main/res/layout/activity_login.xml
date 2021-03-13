@@ -9,48 +9,61 @@
     tools:context=".LoginActivity">
 
     <ImageView
-            android:id="@+id/InstaText"
+        android:id="@+id/InstaText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:src="@drawable/nav_logo_whiteout" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColorHint="@color/purple">
+
+        <EditText
+            android:id="@+id/etUsername"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:src="@drawable/nav_logo_whiteout"
-        />
+            android:ems="10"
+            android:hint="Username" />
+    </com.google.android.material.textfield.TextInputLayout>
 
-    <EditText
-        android:id="@+id/etUsername"
+    <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:ems="10"
-        android:hint="username" />
+        android:textColorHint="@color/purple">
 
-    <EditText
-        android:id="@+id/etPassword"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:ems="10"
-        android:hint="password"
-        android:layout_marginBottom="10dp"
-        android:inputType="textPassword" />
+        <EditText
+            android:id="@+id/etPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="1"
+            android:ems="10"
+            android:hint="Password"
+            android:inputType="textPassword" />
+    </com.google.android.material.textfield.TextInputLayout>
 
     <Button
         android:id="@+id/btnLogin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:backgroundTint="#1ab2ff"
-        android:padding="15dp"
         android:layout_marginBottom="10dp"
-        android:text="LOG IN" />
+        android:layout_weight="1"
+        android:backgroundTint="@color/insta_blue"
+        android:padding="15dp"
+        android:text="LOG IN"
+        android:textColor="@color/white" />
 
     <Button
         android:id="@+id/btnSignup"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:backgroundTint="#00cc00"
+        android:backgroundTint="@color/insta_green"
         android:padding="15dp"
-        android:text="SIGN UP" />
+        android:text="SIGN UP"
+        android:textColor="@color/white" />
 
 </LinearLayout>

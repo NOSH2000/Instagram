@@ -50,10 +50,8 @@ public class ComposeFragment extends Fragment {
     public static final int CAPTURE_IMAGE_ACTIVITY_REQUEST_CODE = 42;
     private EditText etDescription;
     private Button btnCaptureImage;
-    private Button actionCompose;
     private ImageView ivPostImage;
     private Button btnSubmit;
-    private Button btnLogout;
     private ProgressBar pbLoading;
     private File photoFile;
     private String photoFileName = "photo.jpeg";
@@ -116,21 +114,11 @@ public class ComposeFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         etDescription = view.findViewById(R.id.etDescription);
         btnCaptureImage = view.findViewById(R.id.btnCaptureImage);
-        actionCompose = view.findViewById(R.id.action_compose);
         ivPostImage = view.findViewById(R.id.ivPostImage);
         btnSubmit = view.findViewById(R.id.btnSubmit);
-        btnLogout = view.findViewById(R.id.btnLogout);
-
 
         pbLoading = view.findViewById(R.id.pbLoading);
 
-        btnLogout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                ParseUser.logOut(); // this will now be null
-                goLoginActivity();
-            }
-        });
 
         btnCaptureImage.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -160,11 +148,6 @@ public class ComposeFragment extends Fragment {
                 savePost(description, currentUser, photoFile);
             }
         });
-    }
-
-    private void goLoginActivity() {
-        Intent i = new Intent(getContext(), LoginActivity.class);
-        startActivity(i);
     }
 
     private void savePost(String description, ParseUser currentUser, File photoFile) {
