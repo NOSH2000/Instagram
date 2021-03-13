@@ -50,6 +50,7 @@ public class ComposeFragment extends Fragment {
     public static final int CAPTURE_IMAGE_ACTIVITY_REQUEST_CODE = 42;
     private EditText etDescription;
     private Button btnCaptureImage;
+    private Button actionCompose;
     private ImageView ivPostImage;
     private Button btnSubmit;
     private Button btnLogout;
@@ -115,6 +116,7 @@ public class ComposeFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         etDescription = view.findViewById(R.id.etDescription);
         btnCaptureImage = view.findViewById(R.id.btnCaptureImage);
+        actionCompose = view.findViewById(R.id.action_compose);
         ivPostImage = view.findViewById(R.id.ivPostImage);
         btnSubmit = view.findViewById(R.id.btnSubmit);
         btnLogout = view.findViewById(R.id.btnLogout);
