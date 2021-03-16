@@ -37,16 +37,16 @@
         android:text="Trying to look hipster"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
 
-    <ImageView
+    <Button
         android:id="@+id/ivHeart"
         android:layout_width="25dp"
         android:layout_height="25dp"
         android:layout_below="@+id/ivImage"
         android:layout_marginLeft="15dp"
         android:layout_marginTop="5dp"
-        app:srcCompat="@drawable/heart_icon" />
+        android:background="@drawable/heart_icon"/>
 
-    <ImageView
+    <Button
         android:id="@+id/ivComment"
         android:layout_width="25dp"
         android:layout_height="25dp"
@@ -54,35 +54,34 @@
         android:layout_marginStart="30dp"
         android:layout_marginTop="6dp"
         android:layout_toEndOf="@+id/ivHeart"
-        app:srcCompat="@drawable/ufi_comment" />
+        android:background="@drawable/ufi_comment" />
 
-    <ImageView
+    <Button
         android:id="@+id/ivShare"
-        android:layout_width="40dp"
-        android:layout_height="25dp"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
         android:layout_below="@+id/ivImage"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="6dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="5dp"
         android:layout_toEndOf="@+id/ivComment"
-        app:srcCompat="@drawable/share_icon" />
+        android:background="@drawable/share_icon" />
 
-    <ImageView
+    <Button
         android:id="@+id/ivSave"
         android:layout_width="20dp"
-        android:layout_height="20dp"
+        android:layout_height="25dp"
         android:layout_below="@+id/ivImage"
         android:layout_marginRight="10dp"
         android:layout_alignParentRight="true"
         android:layout_marginTop="6dp"
-        app:srcCompat="@drawable/save_icon" />
+        android:background="@drawable/save_icon" />
 
     <ImageView
         android:id="@+id/ivMore"
-        android:layout_width="wrap_content"
+        android:layout_width="5dp"
         android:layout_height="25dp"
         android:layout_alignParentRight="true"
         android:layout_marginRight="10dp"
         android:layout_marginTop="6dp"
-        app:srcCompat="@drawable/ufi_more" />
-
+        android:background="@drawable/ufi_more" />
 </RelativeLayout>

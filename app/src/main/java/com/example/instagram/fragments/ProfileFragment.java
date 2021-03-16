@@ -31,8 +31,16 @@ public class ProfileFragment extends PostFragment {
                 for (Post post : posts) {
                     Log.i(TAG, "Post: " + post.getDescription() + ", Username: " + post.getUser().getUsername());
                 }
-                allPosts.addAll(posts);
-                adapter.notifyDataSetChanged();
+                // Remember to CLEAR OUT old items before appending in the new ones
+                adapter.clear();
+                // ...the data has come back, add new items to your adapter...
+                adapter.addAll(posts);
+                // Now we call setRefreshing(false) to signal refresh has finished
+                swipeContainer.setRefreshing(false);
+
+                // This is a part of addAll method in adapter
+// allPosts.addAll(posts);
+// adapter.notifyDataSetChanged();
             }
         });
     }

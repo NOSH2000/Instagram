@@ -11,4 +11,6 @@
     <color name="insta_blue">#1ab2ff</color>
     <color name="insta_green">#00cc00</color>
     <color name="purple">#6E41C8</color>
+    <color name="pink">#ff0000</color>
+    <color name="transp_purple">#6BB927DF</color>
 </resources>

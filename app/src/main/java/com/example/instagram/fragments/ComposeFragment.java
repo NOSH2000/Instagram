@@ -142,6 +142,8 @@ public class ComposeFragment extends Fragment {
                 }
                 ParseUser currentUser = ParseUser.getCurrentUser();
 
+                Toast.makeText(getContext(), "Submit Post", Toast.LENGTH_SHORT).show();
+
                 // on some click or some loading we need to wait for...
                 pbLoading.setVisibility(ProgressBar.VISIBLE);
 
@@ -167,6 +169,8 @@ public class ComposeFragment extends Fragment {
 
                 // Clear out the image preview
                 ivPostImage.setImageResource(0);
+
+                Toast.makeText(getContext(), "Post Successful!", Toast.LENGTH_SHORT).show();
 
                 pbLoading.setVisibility(ProgressBar.INVISIBLE);
             }
